@@ -7,7 +7,7 @@ from io import BytesIO
 from cStringIO import StringIO
 
 import nxo64
-from demangling import get_demangled
+from demangling_light import get_demangled
 
 '''
 TODO: try to turn into mangled symbols:

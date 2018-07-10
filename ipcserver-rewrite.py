@@ -10,7 +10,7 @@ from unicorn.arm64_const import *
 from capstone import *
 
 import nxo64
-from demangling import get_demangled
+from demangling_light import get_demangled
 from unicornhelpers import load_nxo_to_unicorn, create_unicorn_arm64
 
 from hashes import all_hashes, all_hashes_300
