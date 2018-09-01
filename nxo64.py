@@ -312,8 +312,10 @@ class NxoFileBase(object):
             nbuckets, symoffset, bloom_size, bloom_shift = f.read('IIII')
             f.skip(bloom_size * self.offsize)
             buckets = [f.read('I') for i in range(nbuckets)]
-            
-            max_symix = max(buckets)
+            if buckets == []:
+                max_symix = 0
+            else:
+                max_symix = max(buckets)
             if max_symix >= symoffset:
                 f.skip((max_symix - symoffset) * 4)
                 while (f.read('I') & 1) == 0:

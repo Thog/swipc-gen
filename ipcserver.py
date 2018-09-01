@@ -493,4 +493,4 @@ for i in sys.argv[1:]:
 			if len(v) != 1:
 				print '#', hex(k), v
 			else:
-				print 'MakeName(0x%X,%r)' % (k, str(list(v)[0]))
+				print 'MakeName(0x%X,\"%s\");' % (k, str(list(v)[0]))
